@@ -7,7 +7,7 @@
     var imagesLoadedArray = [];
     // Array to hold the default_configuration values
     var defaultConfigArray = [];
-    // Array to hold images fetched from menu clicks
+    // Array to hold images initialised using default_configuration
     var initImagesArray = [];
     // Array to hold saved configs of user
     var imagesToSaveArray = [];
@@ -127,8 +127,8 @@
         // Parse responseText
         configObj = JSON.parse(json); //  Now it's a JS object
 
-        // Get default config values
-        var defaultConfig = configObj.default_configuration;
+        // So get default config values
+        var defaultConfig = configObj.default_configuration; // It's an array now
         // Loop through default_config
         for (var k = 0; k < defaultConfig.length; k++) {
             defaultConfigArray.push(defaultConfig[k]);
